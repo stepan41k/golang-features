@@ -78,19 +78,6 @@ func main() {
 		return
 	}
 
-	createObj := func(typeObject string) {
-		select {
-		case <-ctx.Done():
-		default:
-			val := NewObject(typeObject)
-			select {
-			case <-ctx.Done:
-				return
-			case ch <- val:
-				// return 
-			}
-		}
-	}
-
+	fmt.Println(results)
 }
 
