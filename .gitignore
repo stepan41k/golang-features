@@ -1,2 +1,3 @@
 .vscode
 /cmd/main.go
+/cmd/main.sql
