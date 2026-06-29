@@ -7,18 +7,15 @@ import (
 )
 
 func main() {
-	// Создаем сканер для чтения из стандартного потока ввода (клавиатура)
 	scanner := bufio.NewScanner(os.Stdin)
 
-	fmt.Print("Введите ваше имя: ")
+	fmt.Printf("Введите ваше имя: ")
 
-	// Метод Scan() считывает данные до следующего перевода строки
 	if scanner.Scan() {
-		name := scanner.Text() // Получаем строку
+		name := scanner.Text()
 		fmt.Printf("Привет, %s!\n", name)
 	}
 
-	// Проверка на ошибки при чтении
 	if err := scanner.Err(); err != nil {
 		fmt.Fprintln(os.Stderr, "Ошибка чтения:", err)
 	}
