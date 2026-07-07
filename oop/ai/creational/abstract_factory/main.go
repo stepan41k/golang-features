@@ -25,7 +25,6 @@ func (ms ModernSofa) Soft() bool {
 	return true
 }
 
-
 type ModernFactory struct {}
 
 func (mf ModernFactory) CreateChair() Chair {
