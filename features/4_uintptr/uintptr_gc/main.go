@@ -5,6 +5,8 @@ import (
 	"unsafe"
 )
 
+// go run -gcflags=-d=checkptr main.go
+
 func main() {
 	x := new(int)
 	y := new(int)
